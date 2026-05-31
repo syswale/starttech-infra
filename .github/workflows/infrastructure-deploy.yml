@@ -9,6 +9,8 @@ on:
 
 env:
   AWS_REGION: us-east-1
+  TF_VAR_ecr_image_uri: ${{ secrets.ECR_IMAGE_URI }}
+  TF_VAR_jwt_secret: ${{ secrets.JWT_SECRET }}
 
 jobs:
   terraform-deploy:
