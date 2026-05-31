@@ -34,9 +34,9 @@ module "compute" {
   public_subnet_ids = module.networking.public_subnet_ids
   alb_sg_id         = module.networking.alb_sg_id
   ec2_sg_id         = module.networking.ec2_sg_id
-  
-  ecr_image_uri     = var.ecr_image_uri
-  jwt_secret        = var.jwt_secret
-  redis_endpoint    = module.storage.redis_endpoint
-  log_group_name    = "/ecs/${var.project_name}-backend"
+
+  ecr_image_uri  = var.ecr_image_uri
+  jwt_secret     = var.jwt_secret
+  redis_endpoint = module.storage.redis_endpoint
+  log_group_name = "/ecs/${var.project_name}-backend"
 }
