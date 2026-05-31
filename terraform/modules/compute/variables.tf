@@ -1,0 +1,10 @@
+variable "project_name" { type = string }
+variable "vpc_id" { type = string }
+variable "public_subnet_ids" { type = list(string) }
+variable "alb_sg_id" { type = string }
+variable "ec2_sg_id" { type = string }
+variable "aws_region" { type = string }
+variable "ecr_image_uri" { type = string }
+variable "jwt_secret" { type = string }
+variable "redis_endpoint" { type = string }
+variable "log_group_name" { type = string }
