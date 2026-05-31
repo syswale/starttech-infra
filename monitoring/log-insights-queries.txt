@@ -1,0 +1,9 @@
+# Query 1: Fetch the 50 most recent errors from the backend API logs
+fields @timestamp, @message
+| filter @message like /ERROR|Exception/
+| sort @timestamp desc
+| limit 50
+
+# Query 2: Show the volume of log entries per 5-minute interval
+fields @timestamp, @message
+| stats count(*) as LogCount by bin(5m)

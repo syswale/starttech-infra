@@ -1,0 +1,17 @@
+{
+  "AlarmName": "HighCPUUtilization-StartTech",
+  "AlarmDescription": "Triggers when CPU utilization exceeds 80% for 5 minutes",
+  "MetricName": "CPUUtilization",
+  "Namespace": "AWS/EC2",
+  "Statistic": "Average",
+  "Period": 300,
+  "EvaluationPeriods": 1,
+  "Threshold": 80.0,
+  "ComparisonOperator": "GreaterThanThreshold",
+  "Dimensions": [
+    {
+      "Name": "AutoScalingGroupName",
+      "Value": "starttech-v2-asg"
+    }
+  ]
+}
